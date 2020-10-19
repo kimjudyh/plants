@@ -9,8 +9,12 @@ const app = express();
 app.set('view engine', 'ejs');
 
 // MODELS
+// move to controller later
+const db = require('./models');
+console.log('connected to plant db')
 
 // CONTROLLERS
+const plantsController = require('./controllers/plantsController');
 
 // MIDDLEWARE
 app.use(bodyParser.urlencoded({extended: true}));
@@ -28,6 +32,8 @@ app.use((req, res, next) => {
 app.get('/', (req, res) => {
   res.send('<h1>Plants Homepage!</h1>');
 })
+
+app.use('/plants', plantsController);
 
 // SERVER LISTENER
 app.listen(4500, () => {
