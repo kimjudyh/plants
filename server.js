@@ -29,10 +29,12 @@ app.use((req, res, next) => {
 })
 
 // ROUTES
+// root route
 app.get('/', (req, res) => {
   res.send('<h1>Plants Homepage!</h1>');
 })
 
+// plants routes
 app.use('/plants', plantsController);
 
 // SERVER LISTENER
