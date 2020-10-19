@@ -4,6 +4,9 @@
   <h2><%= plant.name %></h2>
   <p>This is the show page!</p>
   <a href="/plants/<%= id %>/edit">Edit</a>
+  <form action="/plants/<%= id %>?_method=DELETE" method="POST">
+    <button type="submit">Delete Plant</button>
+  </form>
 </main>
 
 <%- include('./partials/_footer') %>
