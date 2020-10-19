@@ -31,7 +31,7 @@ app.use((req, res, next) => {
 // ROUTES
 // root route
 app.get('/', (req, res) => {
-  res.send('<h1>Plants Homepage!</h1>');
+  res.send('<h1><a href="/plants">Plants Homepage!</a></h1>');
 })
 
 // plants routes

@@ -87,5 +87,17 @@ router.put('/:id', async (req, res) => {
   }
 })
 
+// DESTROY route
+router.delete('/:id', async (req, res) => {
+  try {
+    const deletedPlant = await db.Plant.findByIdAndDelete(req.params.id);
+    console.log('deleted plant', deletedPlant);
+    res.redirect('/plants')
+  } catch (err) {
+    res.send(err);
+  }
+})
+
+
 // EXPORT
 module.exports = router;
