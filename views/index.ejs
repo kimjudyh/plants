@@ -5,6 +5,7 @@
 <% plants.forEach((plant, index) => { %>
   <section>
     <h4><%= plant.name %></h4>
+    <a href="/plants/<%= plant._id %>">See details</a>
   </section>
 <% }) %>
 
