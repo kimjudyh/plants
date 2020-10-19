@@ -6,7 +6,7 @@ const router = express.Router();
 const db = require('../models');
 
 // ROUTES
-// INDEX
+// Index
 router.get('/', (req, res) => {
   db.Plant.find({}, (err, allPlants) => {
     if (err) {
@@ -14,12 +14,32 @@ router.get('/', (req, res) => {
     }
 
     console.log(allPlants);
-    res.send(allPlants)
+
+    res.render('index', {
+      title: 'Plants',
+      plants: allPlants,
+    })
 
   })
 })
 
-// CREATE
+// GET new route
+router.get('/new', (req, res) => {
+  res.render('new', {
+    title: 'New Plant'
+  })
+})
+
+// POST create route
+router.post('/', async (req, res) => {
+  try {
+    console.log('create plant req.body', req.body)
+    const newPlant = await db.Plant.create(req.body);
+    res.redirect('/plants');
+  } catch (err) {
+    res.send(err);
+  }
+})
 
 // EXPORT
 module.exports = router;
