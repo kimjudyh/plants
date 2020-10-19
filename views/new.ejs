@@ -1,0 +1,12 @@
+<%- include('./partials/_head') %>
+
+<main>
+  <h2>Add Plant</h2>
+  <form action="/plants" method="POST">
+    <label for="name">Name: </label>
+    <input type="text" id="name" name="name" placeholder="Plant Name">
+    <button type="submit">Submit</button>
+  </form>
+</main>
+
+<%- include('./partials/_footer') %>

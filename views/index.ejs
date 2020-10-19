@@ -1,0 +1,11 @@
+<%- include('./partials/_head') %>
+
+<h2>All Plants</h2>
+<a href="/plants/new">Add New Plant</a>
+<% plants.forEach((plant, index) => { %>
+  <section>
+    <h4><%= plant.name %></h4>
+  </section>
+<% }) %>
+
+<%- include('./partials/_footer') %>
