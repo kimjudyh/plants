@@ -3,7 +3,7 @@
 <main>
   <form action="/plants/<%= id %>?_method=PUT" method="POST">
     <label for="name">Name: </label>
-    <input type="text" id="name" name="name" value="<%= plant.name %>">
+    <input type="text" id="name" name="name" value="<%= plant.name %>" autofocus>
     <button type="submit">Submit Changes</button>
 
   </form>
