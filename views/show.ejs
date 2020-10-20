@@ -2,7 +2,10 @@
 
 <main>
   <h2><%= plant.name %></h2>
-  <p>This is the show page!</p>
+  <section>
+    <h4>Watering Schedule</h4>
+    <p><%= plant.wateringSchedule %></p>
+  </section>
   <a href="/plants/<%= id %>/edit">Edit</a>
   <form action="/plants/<%= id %>?_method=DELETE" method="POST">
     <button type="submit">Delete Plant</button>

@@ -3,8 +3,16 @@
 <main>
   <h2>Add Plant</h2>
   <form action="/plants" method="POST">
-    <label for="name">Name: </label>
-    <input type="text" id="name" name="name" placeholder="Plant Name" autofocus>
+    <section>
+      <label for="name">Name: </label>
+      <input type="text" id="name" name="name" placeholder="Plant Name" autofocus>
+    </section>
+    <section>
+      <label for="schedule">Watering Schedule: </label>
+      <input type="text" id="schedule" name="wateringSchedule" placeholder="Ex. Daily">
+    </section>
+
+
     <button type="submit">Submit</button>
   </form>
 </main>

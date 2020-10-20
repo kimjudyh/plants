@@ -2,8 +2,14 @@
 
 <main>
   <form action="/plants/<%= id %>?_method=PUT" method="POST">
-    <label for="name">Name: </label>
-    <input type="text" id="name" name="name" value="<%= plant.name %>" autofocus>
+    <section>
+      <label for="name">Name: </label>
+      <input type="text" id="name" name="name" value="<%= plant.name %>" autofocus>
+    </section>
+    <section>
+      <label for="schedule">Watering Schedule: </label>
+      <input type="text" id="schedule" name="wateringSchedule" value="<%= plant.wateringSchedule %>">
+    </section>
     <button type="submit">Submit Changes</button>
 
   </form>
